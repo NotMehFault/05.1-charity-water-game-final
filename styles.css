@@ -1,0 +1,176 @@
+@media (max-width: 576px) {
+    .content-area {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100vw;
+        border-radius: 0;
+    }
+}
+@media (min-width: 992px) {
+    .content-area {
+        max-height: 500px;
+        min-height: 500px;
+        font-size: 1.2rem;
+        padding: 32px;
+    }
+    .droplet-container {
+        padding: 60px 40px;
+    }
+    .droplet {
+        width: 180px;
+        height: 180px;
+    }
+}
+/* Charity: water Brand Colors
+
+Primary Colors:
+- Yellow:     #FFC907
+- Blue:       #2E9DF7
+
+Secondary Colors:
+- Light Blue: #8BD1CB
+- Green:      #4FCB53
+- Orange:     #FF902A
+- Red:        #F5402C
+- Dark Green: #159A48
+- Pink:       #F16061
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFC907; /* Primary yellow background */
+        padding: 20px;
+
+@media (max-width: 576px) {
+    .content-area {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100vw;
+        margin-left: -20px;
+        margin-right: -20px;
+        border-radius: 0;
+    }
+}
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2E9DF7; /* Primary blue for main container */
+    color: #fff;
+    border: 2px solid #FFC907;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.click-counter {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #FFC907;
+    color: #333;
+    margin-top: 10px;
+}
+
+.droplet-container {
+    text-align: center;
+    padding: 40px 20px;
+    border: 2px solid #FFC907;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.droplet {
+    width: 120px;
+    height: 120px;
+    background-color: #2E9DF7;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(135deg);
+    margin: 20px auto;
+}
+
+.droplet-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.droplet-subtitle {
+    color: #666;
+    font-size: 14px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 15px 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #FFC907;
+    color: #333;
+    border-color: #2E9DF7;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content-area {
+    border: 2px solid #2E9DF7;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 300px;
+        max-height: 300px;
+        overflow-y: scroll;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 2px solid #FFC907;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.item-icon {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #2E9DF7;
+    border-radius: 5px;
+    background-color: #8BD1CB; /* Secondary light blue */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.item-description {
+    flex: 1;
+}
