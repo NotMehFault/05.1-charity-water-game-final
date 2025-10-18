@@ -20,15 +20,20 @@
                 <!-- Left side: header and droplet -->
                 <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center">
                     <div class="header">
-                        <h2>Project: Water clickable link to website</h2>
+                        <a href="https://www.charitywater.org/" target="_blank" style="text-decoration:none; color:#2E9DF7;">
+                            <h2>Charity: Water</h2>
+                        </a>
                         <div class="click-counter">
                             Water Collected: <span id="counter">0</span>
+                        </div>
+                        <div class="click-counter" style="margin-top: 5px; font-size: 0.9em;">
+                            Clicks Per Second: <span id="clicks-per-minute-display">0</span>
                         </div>
                     </div>
                     <div class="droplet-container">
                         <div class="droplet"></div>
-                        <div class="droplet-title">Water droplet icon</div>
-                        <div class="droplet-subtitle">Project: Water</div>
+                        <div class="droplet-title">Collect Water!</div>
+                        <div class="droplet-subtitle">Click to collect!</div>
                     </div>
                 </div>
                 <!-- Right side: tabs and content-area -->
@@ -36,54 +41,81 @@
                     <div class="tabs">
                         <div class="tab" id="shop-tab">Shop</div>
                         <div class="tab" id="achievements-tab">Achievements</div>
-                        <div class="tab">Stats</div>
+                        <div class="tab" id="stats-tab">Stats</div>
                         <div class="tab" id="settings-tab">Settings</div>
                     </div>
                     <div class="content-area">
-                                                <div id="shop-content">
-                                                    <div class="item">
-                                                            <div class="item-icon">Item 1 Icon</div>
-                                                            <div class="item-description">Description / Cost: 10</div>
-                                                    </div>
-                                                    <div class="item">
-                                                            <div class="item-icon">Item 2 Icon</div>
-                                                            <div class="item-description">Description / Cost: 50</div>
-                                                    </div>
-                                                    <div class="item">
-                                                            <div class="item-icon">Item 3 Icon</div>
-                                                            <div class="item-description">Description / Cost: 100</div>
-                                                    </div>
-                                                    <div class="item">
-                                                            <div class="item-icon">Item 4 Icon</div>
-                                                            <div class="item-description">Description / Cost: 1000</div>
-                                                    </div>
-                                                </div>
-                                                <div id="achievements-content" style="display:none;">
-                                                    <div class="content-area" style="margin-top:10px;">
-                                                        <div class="item">
-                                                            <div class="item-icon">🏆</div>
-                                                            <div class="item-description">First Click: Click the droplet once!</div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="item-icon">🏆</div>
-                                                            <div class="item-description">Collector: Reach 50 clicks!</div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="item-icon">🏆</div>
-                                                            <div class="item-description">Master: Reach 100 clicks!</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="settings-content" style="display:none;">
-                                                    <div class="content-area" style="margin-top:10px;">
-                                                        <div class="item">
-                                                            <div class="item-icon">🔄</div>
-                                                            <div class="item-description">
-                                                                <button id="reset-counter-btn" style="background:#FFC907; color:#333; border:2px solid #2E9DF7; border-radius:5px; padding:10px 20px; font-size:1rem; cursor:pointer;">Reset Counter</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                        <div id="shop-content">
+                            <div class="item">
+                                    <div class="item-icon"><img src="img/water-can.png" alt="Water Can" class="item-icon-img"></div>
+                                    <div class="item-description">Description / Cost: 10</div>
+                            </div>
+                            <div class="item">
+                                    <div class="item-icon"><img src="img/water-can.png" alt="Water Can" class="item-icon-img"></div>
+                                    <div class="item-description">Description / Cost: 50</div>
+                            </div>
+                            <div class="item">
+                                    <div class="item-icon"><img src="img/water-can.png" alt="Water Can" class="item-icon-img"></div>
+                                    <div class="item-description">Description / Cost: 100</div>
+                            </div>
+                            <div class="item">
+                                    <div class="item-icon"><img src="img/water-can.png" alt="Water Can" class="item-icon-img"></div>
+                                    <div class="item-description">Description / Cost: 1000</div>
+                            </div>
+                        </div>
+                        <div id="achievements-content" style="display:none;">
+                            <div class="content-area" style="margin-top:10px;">
+                                <div class="item">
+                                    <div class="item-icon">🏆</div>
+                                    <div class="item-description">First Click: Click the droplet once!</div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-icon">🏆</div>
+                                    <div class="item-description">Collector: Reach 500 clicks!</div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-icon">🏆</div>
+                                    <div class="item-description">Master: Reach 1000 clicks!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="settings-content" style="display:none;">
+                            <div class="content-area" style="margin-top:10px;">
+                                <div class="item">
+                                    <div class="item-icon">🔄</div>
+                                    <div class="item-description">
+                                        <button id="reset-counter-btn" style="background:#FFC907; color:#333; border:2px solid #2E9DF7; border-radius:5px; padding:10px 20px; font-size:1rem; cursor:pointer;">Reset Counter</button>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-icon">⏸️</div>
+                                    <div class="item-description">
+                                        <button id="pause-btn" style="background:#FFC907; color:#333; border:2px solid #2E9DF7; border-radius:5px; padding:10px 20px; font-size:1rem; cursor:pointer;">Pause Game</button>
+                                        <button id="unpause-btn" style="background:#4FCB53; color:#fff; border:2px solid #2E9DF7; border-radius:5px; padding:10px 20px; font-size:1rem; cursor:pointer; display:none;">Unpause Game</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="stats-content" style="display:none;">
+                            <div class="content-area" style="margin-top:10px;">
+                                <div class="item">
+                                    <div class="item-icon">💧</div>
+                                    <div class="item-description">Current Water: <span id="current-water">0</span></div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-icon">📊</div>
+                                    <div class="item-description">Total Clicks: <span id="total-clicks">0</span></div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-icon">⏱️</div>
+                                    <div class="item-description">Play Time: <span id="play-time">0m 0s</span></div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-icon">🏆</div>
+                                    <div class="item-description">Achievements Unlocked: <span id="achievements-unlocked">0</span> / <span id="total-achievements">3</span></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

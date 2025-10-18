@@ -46,7 +46,7 @@ Secondary Colors:
 body {
     font-family: Arial, sans-serif;
     background-color: #FFC907; /* Primary yellow background */
-        padding: 20px;
+    padding: 20px;
 
 @media (max-width: 576px) {
     .content-area {
@@ -171,6 +171,44 @@ body {
     flex-shrink: 0;
 }
 
+/* Style for the water can images inside item icons */
+.item-icon-img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain; /* This ensures the image fits nicely within the box */
+}
+
 .item-description {
     flex: 1;
+}
+
+/* Image gallery styles */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    align-items: start;
+}
+
+.gallery-item {
+    border: 2px solid rgba(0,0,0,0.05);
+    border-radius: 6px;
+    padding: 6px;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-img {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
